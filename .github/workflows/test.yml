@@ -92,12 +92,14 @@ jobs:
       - name: Install Base Dependencies
         run: |
           sudo port install lensfun
-          sudo port select --set python2 python27
       - name: Update lensfun data
         env:
           PYTHONPATH: /opt/local/lib/python3.9/site-packages/
         run: |
           brew install tree
+
+          echo "lensfun-update-data is here:"
+          echo `which lensfun-update-data`
 
           echo "--- head of lensfun-update-data ---"
           head `which lensfun-update-data`
