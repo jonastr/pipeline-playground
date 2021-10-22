@@ -93,8 +93,8 @@ jobs:
         run: |
           sudo port install lensfun
       - name: Update lensfun data
-        env:
-          PYTHONPATH: /opt/local/lib/python3.9/site-packages/
+        #env:
+        #  PYTHONPATH: /opt/local/lib/python3.9/site-packages/
         run: |
           brew install tree
 
@@ -104,5 +104,5 @@ jobs:
           echo "--- head of lensfun-update-data ---"
           head `which lensfun-update-data`
           echo "--- end ---"
-          
-          tree /opt/local/
+
+          sudo find /opt -type d -name lensfun
