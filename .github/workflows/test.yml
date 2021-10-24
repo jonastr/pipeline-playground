@@ -40,6 +40,11 @@ jobs:
         with:
           submodules: true
           path: src
+      - name: Uninstall homebrew
+        run: |
+        curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/uninstall.sh
+        echo brew prefix: `brew --prefix`
+        sudo /bin/bash uninstall.sh -p `brew --prefix`
       - name: Install MacPorts
         run: |
           curl -LO https://raw.githubusercontent.com/GiovanniBussi/macports-ci/master/macports-ci
