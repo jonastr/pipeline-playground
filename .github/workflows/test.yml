@@ -42,7 +42,7 @@ jobs:
           path: src
       - name: Uninstall homebrew
         run: |
-          curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/uninstall.sh
+          curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/uninstall.sh > uninstall.sh
           echo brew prefix: `brew --prefix`
           sudo /bin/bash uninstall.sh -p `brew --prefix`
       - name: Install MacPorts
