@@ -109,3 +109,5 @@ jobs:
           echo "--- end ---"
 
           sudo find /opt -type d -name lensfun
+
+          sudo lensfun-update-data
