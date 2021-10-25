@@ -50,7 +50,7 @@ jobs:
           mkdir cmake_build && cd cmake_build
           cmake ../ -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/opt/lensfun
           export LIBRARY_PATH="$LIBRARY_PATH:`brew --prefix`/lib"
-          make install
+          sudo make install
       - name: Update lensfun data
         #env:
         #  PYTHONPATH: /opt/local/lib/python3.9/site-packages/
