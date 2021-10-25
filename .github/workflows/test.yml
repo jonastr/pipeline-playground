@@ -56,8 +56,9 @@ jobs:
         run: |
           export PATH=$PATH:/opt/lensfun/bin
           export PYTHONPATH=/opt/lensfun/lib/python3.9/site-packages/
+          echo PPath: $PYTHONPATH
 
-          ls -al /opt/lensfun/lib/python3.9/site-packages/lensfun
+          head -n 20 /opt/lensfun/lib/python3.9/site-packages/lensfun/__init__.py
 
           echo "lensfun-update-data is here:"
           echo `which lensfun-update-data`
