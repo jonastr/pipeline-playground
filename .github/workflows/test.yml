@@ -53,8 +53,8 @@ jobs:
           make
           sudo make install
       - name: Update lensfun data
-        #env:
-        #  PYTHONPATH: /opt/local/lib/python3.9/site-packages/
+        env:
+          PYTHONPATH: /opt/lensfun/lib/python3.9/site-packages/
         run: |
           echo "lensfun-update-data is here:"
           echo `which lensfun-update-data`
