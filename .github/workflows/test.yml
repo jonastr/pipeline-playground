@@ -67,4 +67,4 @@ jobs:
           head `which lensfun-update-data`
           echo "--- end ---"
 
-          sudo lensfun-update-data
+          lensfun-update-data
