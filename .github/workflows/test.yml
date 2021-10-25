@@ -101,8 +101,6 @@ jobs:
         #env:
         #  PYTHONPATH: /opt/local/lib/python3.9/site-packages/
         run: |
-          brew install tree
-
           echo "lensfun-update-data is here:"
           echo `which lensfun-update-data`
 
