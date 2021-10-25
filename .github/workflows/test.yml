@@ -40,7 +40,9 @@ jobs:
         with:
           submodules: true
           path: src
-      - name: Install Base Dependencies
+      - name: Install Base dependencies
+        run: brew install glib
+      - name: Compile and install lensfun
         run: |
           wget https://github.com/lensfun/lensfun/archive/refs/tags/v0.3.2.tar.gz -O lensfun-v0.3.2.tar.gz
           tar xzf lensfun-v0.3.2.tar.gz
